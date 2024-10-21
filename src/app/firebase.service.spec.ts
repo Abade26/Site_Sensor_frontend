@@ -6,7 +6,7 @@ describe('FirebaseService', () => {
   let service: FirebaseService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule  ({});
     service = TestBed.inject(FirebaseService);
   });
 
