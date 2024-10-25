@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-image:url(assets/reproducao-kacper-pempel.png);
+    background-image:url(assets/reproducao-kacper-pempel.png);    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     max-width: auto;
+    background-color: black;
 }

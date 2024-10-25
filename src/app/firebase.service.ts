@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore';
 import { environment } from '../environments/environment';
 
 @Injectable({
@@ -23,6 +23,13 @@ export class FirebaseService {
       console.error('Erro ao adicionar documento: ', e);
     }
   }
-}
 
-/*Teste*/ 
+  async getData(collectionName: string): Promise<any[]> {
+    const querySnapshot = await getDocs(collection(this.firestore, collectionName));
+    const data: any[] = [];
+    querySnapshot.forEach((doc) => {
+      data.push({ id: doc.id, ...doc.data() }); 
+    });
+    return data;
+  }
+}

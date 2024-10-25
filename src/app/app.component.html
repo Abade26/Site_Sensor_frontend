@@ -5,18 +5,7 @@
       Digite o nível de CO² em ppm:
       <input type="number" [(ngModel)]="dado.co2" min="0" required>
       <button (click)="enviarDados(i)">Enviar Dados</button>
-      <button (click)="verificarDados(i)">Verificar Dados</button>
     </li>
   </ul>
+  <button (click)="verificarDados()">Verificar Dados</button>
 </div>
-<!--
-<div class="container">
-  <h1>{{ title }}</h1>
-  <ul>
-    <li *ngFor="let dado of dados; let i = index">
-      Temperatura: {{ dado.temperatura }}°C, U'midade: {{ dado.umidade }}%
-      
-    </li>
-  </ul>
-</div>
--->
